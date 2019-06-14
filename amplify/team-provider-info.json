@@ -1,0 +1,14 @@
+{
+    "develop": {
+        "awscloudformation": {
+            "AuthRoleName": "chat-develop-20190613122819-authRole",
+            "UnauthRoleArn": "arn:aws:iam::622886906833:role/chat-develop-20190613122819-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::622886906833:role/chat-develop-20190613122819-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "chat-develop-20190613122819-deployment",
+            "UnauthRoleName": "chat-develop-20190613122819-unauthRole",
+            "StackName": "chat-develop-20190613122819",
+            "StackId": "arn:aws:cloudformation:us-west-2:622886906833:stack/chat-develop-20190613122819/406d1fd0-8df8-11e9-9bff-02c241aeeb4e"
+        }
+    }
+}

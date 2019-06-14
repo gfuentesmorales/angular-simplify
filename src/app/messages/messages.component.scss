@@ -1,0 +1,63 @@
+
+ 
+  #history {
+    height: 516px;
+    overflow-y: auto;
+    .incoming_msg_img {
+        display: inline-block;
+        width: 6%;
+        img {
+            width: 100%;
+        }
+    }
+    .outgoing_msg {
+        overflow: hidden;
+        margin: 26px 0 26px;
+      }
+      
+      .received_msg {
+        display: inline-block;
+        padding: 0 0 0 10px;
+        vertical-align: top;
+        width: 92%;
+      }
+      
+    
+      .received_withd_msg {
+        width: 57%;
+        p {
+            background: #ebebeb none repeat scroll 0 0;
+            border-radius: 0 15px 15px 15px;
+            color: #646464;
+            font-size: 14px;
+            margin: 0;
+            padding: 5px 10px 5px 12px;
+            width: 100%;
+          }
+      }
+    
+      .time_date {
+        color: #747474;
+        display: block;
+        font-size: 12px;
+        margin: 8px 0 0;
+      }
+      
+    
+      .sent_msg {
+        float: right;
+        width: 46%;
+        p {
+            background: #0465ac;
+            border-radius: 12px 15px 15px 0;
+            font-size: 14px;
+            margin: 0;
+            color: #fff;
+            padding: 5px 10px 5px 12px;
+            width: 100%;
+        }
+      }
+  }
+  
+  
+  
