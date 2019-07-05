@@ -1,19 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-// interface MessageInterface {
-//   [index: number]: any;
-// }
-
-interface MessageInterface {
-  id?: number;
-  text: string;
-  time: string;
-  date: string;
-  user: {
-    id: number,
-    name: string,
-  };
-}
+import { ChatService } from './../services/chat.service'; 
 
 @Component({
   selector: 'app-messages',
@@ -22,32 +8,13 @@ interface MessageInterface {
 })
 
 export class MessagesComponent implements OnInit {
-  private messages: MessageInterface[];
-  constructor() {
-    this.messages = [
-      // {
-      //   text: 'Hello',
-      //   time: '10:00',
-      //   date: 'June 9',
-      //   user: {
-      //     id: 100,
-      //     name: 'Juan',
-      //   },
-      // },
-      // {
-      //   text: 'Good Bye',
-      //   time: '10:00',
-      //   date: 'June 9',
-      //   user: {
-      //     id: 100,
-      //     name: 'Juan',
-      //   },
-      // }
-    ];
+  private messages: any;
+  constructor(private chatService: ChatService) {
+   
   }
 
   ngOnInit() {
-    console.log(this.messages);
+    this.chatService.getMessages().subscribe(message => this.messages = message);
   }
 
 }

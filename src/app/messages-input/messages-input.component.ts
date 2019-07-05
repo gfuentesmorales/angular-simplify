@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChatService } from '../services/chat.service';
 
 @Component({
   selector: 'app-messages-input',
@@ -6,14 +7,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./messages-input.component.scss']
 })
 export class MessagesInputComponent implements OnInit {
+  
+  message: string;
 
-  constructor() { }
+  constructor(private chatService: ChatService) { }
 
   ngOnInit() {
   }
-  
+
   add() {
-    console.log('add');
+    const { message = '' } = this;
+    this.chatService.addMessage({
+      text: message,
+      time: '10:00',
+      date: 'June 9',
+      user: {
+        id: 100,
+        name: 'Juan',
+      },
+    });
+    this.message = '';
   }
 
 

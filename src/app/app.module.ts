@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MessagesComponent } from './messages/messages.component';
 import { MessagesInputComponent } from './messages-input/messages-input.component';
 
+import { ChatService } from './services/chat.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { MessagesInputComponent } from './messages-input/messages-input.componen
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
